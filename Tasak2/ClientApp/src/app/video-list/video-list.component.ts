@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoService } from '../video.service';
+import { map } from '../../../node_modules/rxjs/operators';
 
 @Component({
   selector: 'video-list',
@@ -21,7 +22,7 @@ export class VideoListComponent implements OnInit {
 
   showVideoList() {
     this.videoService.getConfig()
-      .subscribe(resp =>
+      .subscribe((resp:any )=>
         this.videoList = resp.map(video => {
           return new Video(video.name, video.path)
         })

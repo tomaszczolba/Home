@@ -4,11 +4,13 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { VideoListComponent } from './video-list/video-list.component';
+import { VideoPlayerComponent } from './video-list/video-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideoListComponent
+    VideoListComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,
